@@ -122,3 +122,23 @@ The GitHub Actions workflow builds the app on pushes to `main` and can deploy to
 - `VERCEL_PROJECT_ID`
 
 Static output is generated in `dist`.
+
+## Analytics Snippet
+
+Add a privacy-friendly analytics provider after replacing the domain:
+
+```html
+<script defer data-domain="hookpilot.example.com" src="https://plausible.io/js/script.js"></script>
+```
+
+For Umami, use the hosted script URL and website ID from your Umami project instead.
+
+## Launch Checklist
+
+- Publish the production URL and verify Open Graph previews with LinkedIn, X/Twitter, and Slack.
+- Post a technical launch note on Indie Hackers with screenshots of replay, routing, and anomaly alerts.
+- Submit to Product Hunt with the positioning: "webhook replay and routing for indie SaaS teams."
+- Share a practical webhook failure checklist in relevant Reddit communities before linking the product.
+- Announce on X/Twitter with a short demo clip showing a failed Stripe event being replayed.
+- Add a docs page with SDK snippets for Next.js, Express, Laravel, and Rails.
+- Install Plausible or Umami and track `demo_started`, `event_replayed`, `route_created`, and `plan_upgraded` events.
